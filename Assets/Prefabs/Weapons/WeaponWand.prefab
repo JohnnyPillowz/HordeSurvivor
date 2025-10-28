@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2464234044312511762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8688223500952701542}
+  - component: {fileID: 7419278227400700480}
+  m_Layer: 6
+  m_Name: WeaponWand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8688223500952701542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2464234044312511762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7419278227400700480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2464234044312511762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3daa6193bc6a3b747a8397455398d2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wand
+  damage: 10
+  fireRate: 1
+  range: 15
+  knockback: 10
+  upgradeStatsSOs:
+  - {fileID: 11400000, guid: 99cf404aad4e0fc4bb50bfbdb75ec6e0, type: 2}
+  - {fileID: 11400000, guid: 6d24d88df4a6cd741b8286ff375494f7, type: 2}
+  - {fileID: 11400000, guid: 96a08847d238b984dbf1276b3b6f7398, type: 2}
+  - {fileID: 11400000, guid: c7886de08c28f9a47aa504799cf5b20d, type: 2}
+  - {fileID: 11400000, guid: 86810f1a27a5fa44dbde65c6769422aa, type: 2}
+  projectile: {fileID: 1253599848123516215, guid: 1d75c34c3385a46458d5489240f281c1,
+    type: 3}
+  projectileSpeed: 15
+  isPiercing: 0
