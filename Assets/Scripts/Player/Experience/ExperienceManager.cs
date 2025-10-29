@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ExperienceManager : MonoBehaviour
 {
     public static ExperienceManager Instance;
-
+    
     [SerializeField] private Image experienceBar;
     [SerializeField] private float levelThresholdMultiplier = 1.1f;
     
@@ -12,6 +13,8 @@ public class ExperienceManager : MonoBehaviour
     private int levelThreshold = 10;
 
     private WeaponManager weaponManager;
+    
+    [HideInInspector] public List<Mine> spawnedMines = new List<Mine>();
 
     private void Awake()
     {

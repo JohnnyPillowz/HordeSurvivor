@@ -65,6 +65,7 @@ public class Mine : MonoBehaviour
         experienceManager.IncreaseExperience(experienceGained);
 
         player.controls.ChangeCanMove(true);
+        experienceManager.spawnedMines.Remove(this);
         Destroy(this.gameObject);
     }
     
