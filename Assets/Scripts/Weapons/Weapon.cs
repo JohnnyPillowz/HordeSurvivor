@@ -18,7 +18,7 @@ namespace Weapons
         protected float Range { get => range; set => range = value; }
         protected float Knockback { get => knockback; set => knockback = value; }
     
-        [SerializeField] public List<UpgradeStatsSO> upgradeStatsSOs = new List<UpgradeStatsSO>();
+        [SerializeField] public List<WeaponUpgradeStatsSO> upgradeStatsSOs = new List<WeaponUpgradeStatsSO>();
     
         private Coroutine firingCoroutine;
         

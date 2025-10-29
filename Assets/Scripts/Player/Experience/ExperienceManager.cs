@@ -42,7 +42,7 @@ public class ExperienceManager : MonoBehaviour
         currentExperience += amount;
         if (currentExperience >= levelThreshold)
         {
-            currentExperience = 0;
+            currentExperience -= levelThreshold;
             IncreaseLevelThreshold(levelThresholdMultiplier);
             weaponManager.TurnOnUpgradesScreen();
         }

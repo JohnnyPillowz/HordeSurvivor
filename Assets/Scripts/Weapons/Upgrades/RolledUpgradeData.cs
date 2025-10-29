@@ -1,6 +1,6 @@
 
 public struct RolledUpgradeData
 {
-    public UpgradeStatsSO upgradeSO;
+    public WeaponUpgradeStatsSO WeaponUpgradeSo;
     public float amount;
 }
