@@ -618,7 +618,7 @@ MonoBehaviour:
   enemyManager: {fileID: 738193754}
   enemyPrefabs:
   - {fileID: 4090198333205660148, guid: 986979c719def4747a220cfc2b9424b3, type: 3}
-  spawnInterval: 0.2
+  spawnInterval: 0.4
   minSpawnRange: 35
   maxSpawnRange: 50
 --- !u!114 &738193754
@@ -840,11 +840,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceMineSpawner
   experienceManager: {fileID: 1034607761}
+  spawnInterval: 2
+  minSpawnRange: 40
+  maxSpawnRange: 75
   minePrefab: {fileID: 3632396459229248091, guid: def064c48c660724c9de9536f2d27031,
     type: 3}
-  spawnInterval: 3
-  minSpawnRange: 50
-  maxSpawnRange: 75
+  mineHealth: 10
+  mineExperience: 7
 --- !u!1 &1051521239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,9 +1739,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 738193752}
+  - {fileID: 1034607760}
   - {fileID: 1510129741}
   - {fileID: 1726292740}
-  - {fileID: 1034607760}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8027391102179240518

@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class Mine : MonoBehaviour
 {
-    [SerializeField] private float mineHealth = 10f;
     [SerializeField] private float miningInterval = 0.5f;
-    [SerializeField] private int experienceGained = 10;
     [SerializeField] private Image progressBar;
     [SerializeField] private Canvas progressBarCanvas;
 
+    private float mineHealth;
+    private int experienceGained;
     private Coroutine interactionCoroutine = null;
  
     private Player player;
@@ -67,6 +67,12 @@ public class Mine : MonoBehaviour
         player.controls.ChangeCanMove(true);
         experienceManager.spawnedMines.Remove(this);
         Destroy(this.gameObject);
+    }
+
+    public void Init(int experienceGained, float mineHealth)
+    {
+        this.experienceGained = experienceGained;
+        this.mineHealth = mineHealth;
     }
     
     //Subscribing to events
