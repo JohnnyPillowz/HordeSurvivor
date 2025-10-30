@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int playerStartHealth = 15;
     [SerializeField] private TMP_Text playerHealthText;
-    
-    private int playerMaxHealth;
+    [SerializeField] private Player player;
+
     private int currentHealth;
 
     private void Start()
     {
-        currentHealth = playerStartHealth;
-        playerMaxHealth = playerStartHealth;
-        playerHealthText.text = playerMaxHealth.ToString();
+        currentHealth = player.stats.maxHealth;
+        playerHealthText.text = player.stats.maxHealth.ToString();
     }
 
     public void TakeDamage(float damage)
@@ -28,21 +26,15 @@ public class PlayerHealth : MonoBehaviour
         AdjustHealth(heal);
     }
 
-    public void IncreaseMaxHealth(int increase)
-    {
-        playerMaxHealth += increase;
-        playerHealthText.text = playerMaxHealth.ToString();
-    }
-
     private void AdjustHealth(int amount)
     {
-        if (currentHealth + amount < playerMaxHealth && currentHealth + amount > 0)
+        if (currentHealth + amount < player.stats.maxHealth && currentHealth + amount > 0)
         {
             currentHealth += amount;
         }
-        else if (currentHealth + amount >= playerMaxHealth)
+        else if (currentHealth + amount >= player.stats.maxHealth)
         {
-            currentHealth = playerMaxHealth;
+            currentHealth = player.stats.maxHealth;
         }
         else if (currentHealth + amount <= 0)
         {

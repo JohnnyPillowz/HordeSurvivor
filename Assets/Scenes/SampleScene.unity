@@ -149,10 +149,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347877896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1080}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 860, y: -540}
+  m_SizeDelta: {x: 540, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &306321480
 GameObject:
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: XX
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -565,10 +565,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347877896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1080}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1450, y: -540}
+  m_SizeDelta: {x: 540, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &738193751
 GameObject:
@@ -689,6 +689,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8027391102179240518}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984596128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984596129}
+  - component: {fileID: 984596130}
+  m_Layer: 0
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984596129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984596128}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1845345840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984596130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984596128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b534d3568564194f89fac9773b249e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
+  upgradesScreen: {fileID: 1280325139}
+  upgradeCardSlots:
+  - {fileID: 1096719237}
+  - {fileID: 198677495}
+  - {fileID: 731989419}
+  maxNumOfUpgrades: 3
+  upgradeCards:
+  - {fileID: 1350888319866626553, guid: b16f04f931fd6514c8195eb60198bdfe, type: 3}
+  - {fileID: 3433508580487511528, guid: 18c1e0c7bc17dd742b08c1c943ab55cd, type: 3}
 --- !u!1 &1006770181
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,10 +966,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1347877896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1080}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -540}
+  m_SizeDelta: {x: 540, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1121874195
 GameObject:
@@ -1042,7 +1095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1280325140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1346,14 +1399,6 @@ MonoBehaviour:
   - {fileID: 3619065089329267345, guid: b0f06f9742d1ae140ae9a0d4e1eddc53, type: 3}
   - {fileID: 7419278227400700480, guid: 976e4afe76972a14b902e7e21327e4cf, type: 3}
   weaponParent: {fileID: 378019546}
-  upgradesScreen: {fileID: 1280325139}
-  upgradeCardSlots:
-  - {fileID: 1096719237}
-  - {fileID: 198677495}
-  - {fileID: 731989419}
-  upgradeCardPrefab: {fileID: 1189914075623721852, guid: 18c1e0c7bc17dd742b08c1c943ab55cd,
-    type: 3}
-  maxNumOfUpgrades: 3
 --- !u!1 &1627720915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1787,7 @@ Transform:
   - {fileID: 1034607760}
   - {fileID: 1510129741}
   - {fileID: 1726292740}
+  - {fileID: 984596129}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8027391102179240518
@@ -1806,6 +1852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220589374868998177, guid: b0cfae18d810f6c4399feb7e47cb5417,
+        type: 3}
+      propertyPath: maxHealth
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8610620457365453320, guid: b0cfae18d810f6c4399feb7e47cb5417,
         type: 3}

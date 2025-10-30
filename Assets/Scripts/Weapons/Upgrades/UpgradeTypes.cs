@@ -8,3 +8,10 @@ public enum WeaponUpgradeTypes
     knockback,
     projectileSpeed
 }
+
+public enum PlayerUpgradeTypes
+{
+    movementSpeed,
+    minePower,
+    maxHealth
+}

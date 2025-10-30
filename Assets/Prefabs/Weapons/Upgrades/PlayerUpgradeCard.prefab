@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4242610900062700026}
-  - component: {fileID: 3433508580487511528}
+  - component: {fileID: 1350888319866626553}
   m_Layer: 5
-  m_Name: UpgradeCard
+  m_Name: PlayerUpgradeCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3433508580487511528
+--- !u!114 &1350888319866626553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,13 +46,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1189914075623721852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45fa5aeeea37def48bd1643511e17c0f, type: 3}
+  m_Script: {fileID: 11500000, guid: e15d9dd90ca92784898c91a2b8de09b0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UpgradeCard
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerUpgradeCard
   upgradeTextPrefab: {fileID: 1697326829233112281, guid: f0cb2eacb3d09e448926db245d3a73a5,
     type: 3}
-  upgradeTextTranform: {fileID: 3143882782384168879}
-  weaponManager: {fileID: 0}
+  upgradeTextTransform: {fileID: 3143882782384168879}
 --- !u!1 &2962522155935564160
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,8 +173,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3433508580487511528}
-        m_TargetAssemblyTypeName: UpgradeCard, Assembly-CSharp
+      - m_Target: {fileID: 1350888319866626553}
+        m_TargetAssemblyTypeName: PlayerUpgradeCard, Assembly-CSharp
         m_MethodName: ApplyUpgrade
         m_Mode: 1
         m_Arguments:

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c39c46d093f4b0c4385bf03a5e1832cd, type: 3}
-  m_Name: UpgradeStatsSO_Bow_FireRate
-  m_EditorClassIdentifier: Assembly-CSharp::UpgradeStatsSO
-  upgradeName: Firerate
+  m_Script: {fileID: 11500000, guid: 87e4a54c13e8299469a7549558277b64, type: 3}
+  m_Name: PlayerUpgradeStatsSO_MinePower
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerUpgradeStatsSO
+  upgradeName: Mine Power
   minUpgrade: 0.05
   maxUpgrade: 0.2
   upgradeType: 1

@@ -12,7 +12,7 @@ public class ExperienceManager : MonoBehaviour
     private int currentExperience = 0;
     private int levelThreshold = 10;
 
-    private WeaponManager weaponManager;
+    private UpgradeManager upgradeManager;
     
     [HideInInspector] public List<Mine> spawnedMines = new List<Mine>();
 
@@ -34,7 +34,7 @@ public class ExperienceManager : MonoBehaviour
     {
         currentExperience = 0;
         experienceBar.fillAmount = (float)currentExperience / (float)levelThreshold;
-        weaponManager = WeaponManager.Instance;
+        upgradeManager = UpgradeManager.Instance;
     }
 
     public void IncreaseExperience(int amount)
@@ -44,7 +44,7 @@ public class ExperienceManager : MonoBehaviour
         {
             currentExperience -= levelThreshold;
             IncreaseLevelThreshold(levelThresholdMultiplier);
-            weaponManager.TurnOnUpgradesScreen();
+            upgradeManager.TurnOnUpgradesScreen();
         }
         experienceBar.fillAmount = (float)currentExperience / (float)levelThreshold;
     }

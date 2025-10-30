@@ -5,65 +5,63 @@ using UnityEngine;
 using Weapons;
 using Random = UnityEngine.Random;
 
-public class WeaponUpgradeCard : MonoBehaviour
+public class WeaponUpgradeCard : UpgradeCard
 {
-    [Header("Upgrade Card Text")]
-    [SerializeField] private GameObject upgradeTextPrefab;
-    [SerializeField] private Transform upgradeTextTranform;
-    
-    private List<RolledUpgradeData> rolledUpgradesData = new List<RolledUpgradeData>();
+    private List<RolledWeaponUpgradeData> rolledUpgradesData = new List<RolledWeaponUpgradeData>();
     
     private WeaponManager weaponManager;
+    private UpgradeManager upgradeManager;
 
     private Weapon rolledWeapon;
     
-    void Start()
+    protected override void Start()
     {
         weaponManager = WeaponManager.Instance;
+        upgradeManager = UpgradeManager.Instance;
         RollUpgrade();
     }
 
-    public void RollUpgrade()
+    protected override void RollUpgrade()
     {
         //Roll weapon
         rolledWeapon = weaponManager.ActiveWeapons[Random.Range(0, weaponManager.ActiveWeapons.Count)];
         
-        int numberOfUpgrades = Random.Range(0, weaponManager.maxNumOfUpgrades);
+        int numberOfUpgrades = Random.Range(0, upgradeManager.maxNumOfUpgrades);
         List<WeaponUpgradeStatsSO> possibleUpgrades = new List<WeaponUpgradeStatsSO>(rolledWeapon.upgradeStatsSOs);
 
         for (int i = 0; i <= numberOfUpgrades; i++)
         {
             //manage upgrade option
-            WeaponUpgradeStatsSO weaponUpgradeStatsSo = possibleUpgrades[Random.Range(0, possibleUpgrades.Count)];
-            possibleUpgrades.Remove(weaponUpgradeStatsSo);
+            WeaponUpgradeStatsSO upgradeSO = possibleUpgrades[Random.Range(0, possibleUpgrades.Count)];
+            possibleUpgrades.Remove(upgradeSO);
             
             //roll amount
-            float amount = (Mathf.Round(Random.Range(weaponUpgradeStatsSo.minUpgrade, weaponUpgradeStatsSo.maxUpgrade)*100))/100f;
+            float amount = (Mathf.Round(Random.Range(upgradeSO.minUpgrade, upgradeSO.maxUpgrade)*100))/100f;
             float amountForUpgrade = 1 + amount;
             
             //instantiate and update text
-            TMP_Text upgradeText = Instantiate(upgradeTextPrefab, upgradeTextTranform).GetComponent<TMP_Text>();
+            TMP_Text upgradeText = Instantiate(UpgradeTextPrefab, UpgradeTextTransform).GetComponent<TMP_Text>();
             int amountForText = Mathf.RoundToInt((amount) * 100);
-            string generatedUpgradeText = weaponUpgradeStatsSo.upgradeName + ": " + amountForText + "%";
+            string generatedUpgradeText = upgradeSO.upgradeName + ": " + amountForText + "%";
             upgradeText.text = generatedUpgradeText;
             
             //store data
-            RolledUpgradeData rolledUpgradeData = new RolledUpgradeData
+            RolledWeaponUpgradeData rolledUpgradeData = new RolledWeaponUpgradeData
             {
-                WeaponUpgradeSo = weaponUpgradeStatsSo,
+                WeaponUpgradeSo = upgradeSO,
                 amount = amountForUpgrade
             };
             rolledUpgradesData.Add(rolledUpgradeData);
         }
     }
 
-    public void ApplyUpgrade()
+    public override void ApplyUpgrade()
     {
-        foreach (RolledUpgradeData rolledUpgradeData in rolledUpgradesData)
+        foreach (RolledWeaponUpgradeData rolledUpgradeData in rolledUpgradesData)
         {
             rolledUpgradeData.WeaponUpgradeSo.ApplyUpgrade(rolledWeapon, rolledUpgradeData.amount);
         }
         rolledUpgradesData.Clear();
-        weaponManager.TurnOffUpgradesScreen();
+        upgradeManager.TurnOffUpgradesScreen();
     }
 }

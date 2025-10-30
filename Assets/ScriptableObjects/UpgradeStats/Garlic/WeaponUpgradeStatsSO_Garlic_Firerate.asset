@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c39c46d093f4b0c4385bf03a5e1832cd, type: 3}
-  m_Name: UpgradeStatsSO_Garlic_Range
+  m_Name: WeaponUpgradeStatsSO_Garlic_Firerate
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeStatsSO
-  upgradeName: Radius
+  upgradeName: Fire rate
   minUpgrade: 0.05
   maxUpgrade: 0.2
-  upgradeType: 2
+  upgradeType: 1

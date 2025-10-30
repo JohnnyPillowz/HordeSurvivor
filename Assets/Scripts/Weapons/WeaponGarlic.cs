@@ -60,13 +60,13 @@ namespace Weapons
             {
                 case WeaponUpgradeTypes.damage: Damage *= amount; break;
                 case WeaponUpgradeTypes.fireRate: FireRate *= amount; AdjustRotationSpeed();  break;
-                case WeaponUpgradeTypes.range: Range *= amount; AdjustSize(); break;
+                case WeaponUpgradeTypes.range: Range *= amount; AdjustRange(); break;
                 case WeaponUpgradeTypes.knockback: Knockback *= amount; break;
             }
         }
 
         [ContextMenu("Adjust Size")]
-        private void AdjustSize()
+        private void AdjustRange()
         {
             coll.radius = Range;
             visual.transform.localScale = new Vector3(2 * Range, 2 * Range, 1);
@@ -79,7 +79,7 @@ namespace Weapons
 
         private void OnValidate()
         {
-            AdjustSize();
+            AdjustRange();
             AdjustRotationSpeed();
         }
     }
